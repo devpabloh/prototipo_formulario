@@ -1,4 +1,5 @@
 import './App.css'
+import { InformacoesContratuais } from './components/template/InformacoesContratuais';
 import { Objeto } from './components/template/Objeto';
 import { Tabs } from './components/template/Tabs';
 
@@ -15,8 +16,7 @@ const dadosDasMinhasAbas = [
     label: 'Detalhamento do objeto',
     content: (
       <div>
-        <h3 className="font-bold">Vue.js</h3>
-        <p>Um framework progressivo para a construção de interfaces de usuário.</p>
+        <p>eita</p>
       </div>
     ),
   },
@@ -28,6 +28,14 @@ const dadosDasMinhasAbas = [
         <p>Uma plataforma e framework para criar aplicações de página única.</p>
       </div>
     ),
+  },
+  {
+    label: 'Informações Contratuais',
+    content: (
+      <div>
+        <InformacoesContratuais/>
+      </div>
+    )
   },
   {
     label: 'Informações do Processo',
@@ -63,7 +71,7 @@ const dadosDasMinhasAbas = [
 
 function App() {
   return (
-    <div className='h-screen max-w-xl mx-auto flex items-center'>
+    <div className='flex items-center p-8'>
       <Tabs tabs={dadosDasMinhasAbas}/>
     </div>
   )

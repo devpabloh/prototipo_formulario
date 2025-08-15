@@ -13,7 +13,7 @@ export function Tabs({tabs}: TabsComponentProps){
   const [activeTabIndex, setActiveTabIndex] = useState<number>(0)
 
   return(
-    <div className="max-w-xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <div className="flex border-b border-gray-300" role="tablist" aria-label="Abas de navegação">
         {tabs.map((tab, index)=>{
           const isActive = index === activeTabIndex

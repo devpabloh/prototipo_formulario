@@ -5,12 +5,14 @@ interface InputProps {
   className?: string;
   value?: string | number;
   readOnly?: boolean;
+  placeholder?: string;
+  labelClassName?: string;
 }
 
-export function Input({ identificador, texto, type, className, value, readOnly }: Readonly<InputProps>){
+export function Input({ identificador, texto, type, className, value, readOnly, placeholder,labelClassName  }: Readonly<InputProps>){
   return(
-    <label htmlFor={identificador}>
-      <input id={identificador} type={type} className={`border border-gray-300 p-1 rounded ${className}`} value={value} readOnly={readOnly} />
+    <label htmlFor={identificador} className={labelClassName}>
+      <input id={identificador} type={type} className={`border border-gray-300 p-1 rounded ${className}`} value={value} readOnly={readOnly} placeholder={placeholder} />
       {texto}
     </label>
   )

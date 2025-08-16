@@ -5,29 +5,26 @@ import { SimNao } from "./SimNao";
 export function Objeto(){
   return(
     <section className="flex flex-col gap-1">
-      <h1 className="text-center font-bold">Seção: Objeto da Contratação</h1>
-      <h2 className="font-bold">Objeto da contratação</h2>
+      <h1 className="text-center font-bold text-2xl">Seção: Objeto da Contratação</h1>
+      <h2 className="font-bold text-xl">Objeto da contratação</h2>
       <form action="submit" className="flex flex-col gap-4">
         <div className="flex flex-col">
-          <label htmlFor="objetoDetalhado">Objeto Detalhado <span className="text-red-300">*</span></label>
+          <label htmlFor="objetoDetalhado" className="font-bold">Objeto Detalhado <span className="text-red-300">*</span></label>
           <input type="text" id="objetoDetalhado" className="border border-gray-300 p-2 rounded h-20 mt-2" />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="objetoDetalhado">Objeto Resumido<span className="text-red-300">*</span></label>
+          <label htmlFor="objetoDetalhado" className="font-bold">Objeto Resumido<span className="text-red-300">*</span></label>
           <input type="text" id="objetoDetalhado" className="border border-gray-300 p-2 rounded h-10 mt-2" />
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <div className="flex flex-col">
-            <Select identificador="fracionamento" textoLabel="Fracionamento">
+          <Select identificador="fracionamento" textoLabel="Fracionamento" divClassName="flex flex-col gap-1">
               <option value="">Selecione uma Opção</option>
               <option value="">Por Lote</option>
               <option value="">Por Item</option>
               <option value="">Integral com Itens</option>
               <option value="">Integral sem Itens</option>
-            </Select>
-          </div>
-          <div className="flex flex-col">
-            <Select identificador="naturezaDoObjeto" textoLabel="Natureza do Objeto">
+          </Select>
+          <Select identificador="naturezaDoObjeto" textoLabel="Natureza do Objeto" divClassName="flex flex-col gap-1">
               <option value="">Selecione uma Opção</option>
               <option value="">Fornecimento</option>
               <option value="">Serviço por Escopo</option>
@@ -41,27 +38,22 @@ export function Objeto(){
               <option value="">Concessão</option>
               <option value="">Permissão</option>
             </Select>
-          </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <div className="flex flex-col">
-            <Select identificador="modoDeFornecimento" textoLabel="Modo de Fornecimento">
+          <Select identificador="modoDeFornecimento" textoLabel="Modo de Fornecimento" divClassName="flex flex-col gap-1">
               <option value="">Selecione uma Opção</option>
               <option value="">Integral</option>
               <option value="">Parcelado</option>
-            </Select>
-        </div>
-        <div className="flex flex-col">
-            <Select identificador="regimeDeExecucao" textoLabel="Regime de Execução">
+          </Select>
+          <Select identificador="regimeDeExecucao" textoLabel="Regime de Execução" divClassName="flex flex-col gap-1">
               <option value="">Selecione uma Opção</option>
               <option value="">Empreitada Integral</option>
               <option value="">Empreitada por Preço Global</option>
               <option value="">Empreitada por Preço Unitário</option>
               <option value="">Contratação por Tarefa</option>
-            </Select>
+          </Select>
         </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-1">
           <SimNao label="Envolve terceirização de mão de obra?" name="objetoNovo"/>
           <SimNao label="Possuí Material ou Serviço de Tecnologia da informação?" name="objetoUsado"/>
           <SimNao label="Possuí Material ou Serviço de Engenharia?" name="objetoEngenharia"/>

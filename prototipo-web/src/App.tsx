@@ -1,5 +1,8 @@
 import './App.css'
+import { Anexos } from './components/template/Anexos';
+import { DetalhamentoDoObjeto } from './components/template/DetalhamentoDoObjeto';
 import { InformacoesContratuais } from './components/template/InformacoesContratuais';
+import { InformacoesDoProcesso } from './components/template/InformacoesDoProcesso';
 import { Objeto } from './components/template/Objeto';
 import { Tabs } from './components/template/Tabs';
 
@@ -16,16 +19,7 @@ const dadosDasMinhasAbas = [
     label: 'Detalhamento do objeto',
     content: (
       <div>
-        <p>eita</p>
-      </div>
-    ),
-  },
-  {
-    label: 'Aspectos Técnicos',
-    content: (
-      <div>
-        <h3 className="font-bold text-gray-900">Angular</h3>
-        <p>Uma plataforma e framework para criar aplicações de página única.</p>
+        <DetalhamentoDoObjeto/>
       </div>
     ),
   },
@@ -41,8 +35,7 @@ const dadosDasMinhasAbas = [
     label: 'Informações do Processo',
     content: (
       <div>
-        <h3 className="font-bold text-gray-900">Angular</h3>
-        <p>Uma plataforma e framework para criar aplicações de página única.</p>
+        <InformacoesDoProcesso/>
       </div>
     )
   },
@@ -51,21 +44,10 @@ const dadosDasMinhasAbas = [
     label: 'Anexos',
     content: (
       <div>
-        <h3 className="font-bold text-gray-900">Angular</h3>
-        <p>Uma plataforma e framework para criar aplicações de página única.</p>
+        <Anexos/>
       </div>
     )
-  },
-  
-  {
-    label: 'Controles',
-    content: (
-      <div>
-        <h3 className="font-bold text-gray-900">Angular</h3>
-        <p>Uma plataforma e framework para criar aplicações de página única.</p>
-      </div>
-    )
-  },
+  }
 ];
 
 

@@ -6,12 +6,13 @@ import { SimNao } from "./SimNao";
 export function InformacoesContratuais(){
   return(
     <div>
-      <div className="grid grid-cols-2 gap-4">
+      <h1 className="text-2xl font-bold">Informações Contratuais</h1>
+      <div className="grid grid-cols-2 gap-2">
         <SimNao label="Contrato ou Parceria será substituído por outro instrumento há..." name="contratoOuParceriaSeraSubstituido"/>
         <AdicionarDocumentos name="documento" />
       </div>
-      <div className="flex flex-col gap-4 mt-4">
-        <h2>Regra de prazo</h2>
+      <div className="flex flex-col gap-2 mt-2">
+        <h2 className="font-bold ">Regra de prazo</h2>
         <Input identificador="regra-prazo" texto="Art. 105: Duração Adstrita à Vigência dos Créditos Orçamentários ou por escopo pré-definido." type="radio" className="col-span-2" />
         <Input identificador="regra-prazo-justificativa" texto="Art. 106: Contratos de Serviços e Fornecimentos Contínuos (até 5 anos)." type="radio" className="col-span-2" />
         <Input identificador="regra-prazo" texto="Art. 108: Contratos previstos nas alíneas “f” e “g” do inciso IV e nos incisos V, VI, XII e XVI do caput do art. 75 da Lei 14.133/21 (até 10 anos)." type="radio" className="col-span-2" />
@@ -33,8 +34,8 @@ export function InformacoesContratuais(){
         <SimNao label="E registro de Preços?" name="clausulaRegistroPrecos" />
         <ContadorMeses textoh2="Percentual Limite de Subcontratação do Objeto"/>
       </div>
-      <div className="flex flex-col gap-2 mt-4">
-        <h2>Dotação orçamentária</h2>
+      <div className="flex flex-col gap-2 mt-2">
+        <h2 className="font-bold">Dotação orçamentária</h2>
         <table >
           <thead>
             <tr>
@@ -48,7 +49,7 @@ export function InformacoesContratuais(){
           </thead>
           <tbody>
             <tr>
-              <input type="radio" />
+              <input type="radio" title="marcaElemento" />
               <td className="border px-2"></td>
               <td className="border px-2"></td>
               <td className="border px-2"></td>

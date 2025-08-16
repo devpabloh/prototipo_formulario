@@ -10,8 +10,8 @@ export function SimNao({ label, name, className }: Readonly<SimNaoProps>) {
   const [valor, setValor] = useState<"sim" | "nao">("nao");
 
   return (
-    <div className={`flex flex-col gap-2 ${className}`}>
-      <span>{label}</span>
+    <div className={`flex flex-col ${className}`}>
+      <span className="font-bold">{label}</span>
       <div
         className="w-28 h-10 flex items-center bg-gray-200 rounded-md cursor-pointer relative select-none"
         onClick={() => setValor(valor === "sim" ? "nao" : "sim")}

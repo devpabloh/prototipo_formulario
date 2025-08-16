@@ -13,7 +13,8 @@ export function Tabs({tabs}: TabsComponentProps){
   const [activeTabIndex, setActiveTabIndex] = useState<number>(0)
 
   return(
-    <div className="max-w-7xl mx-auto">
+    <div className="w-4/5 mx-auto">
+      <h1 className="text-3xl font-bold">Processo de Contratação</h1>
       <div className="flex border-b border-gray-300" role="tablist" aria-label="Abas de navegação">
         {tabs.map((tab, index)=>{
           const isActive = index === activeTabIndex
@@ -25,7 +26,7 @@ export function Tabs({tabs}: TabsComponentProps){
             id={`tab-${index}`}
             aria-selected={isActive}
             aria-controls={`tabpanel-${index}`}
-            className={`py-2 px-4 font-medium text-sm transition-colors duration-200
+            className={`py-2 px-4 font-medium text-md transition-colors duration-200
                 ${isActive
                   ? 'border-b-2 border-blue-600 text-blue-600'
                   : 'text-gray-500 hover:text-blue-600 hover:cursor-pointer'
@@ -36,7 +37,7 @@ export function Tabs({tabs}: TabsComponentProps){
         })}
       </div>
       <div
-        className="p-4 bg-white rounded-b-lg shadow-md "
+        className="p-4 bg-white rounded-b-lg shadow-md"
         role="tabpanel"
         id={`tabpanel-${activeTabIndex}`}
         aria-labelledby={`tab-${activeTabIndex}`}

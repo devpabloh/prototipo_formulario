@@ -71,7 +71,7 @@ export function Objeto(){
                 <Input identificador="regra-prazo-justificativa" texto="Contratos de Locação de Imóveis." type="radio" className="col-span-2" />
               </div>
               <div>
-                <Select textoLabel="Regra de Prazo" identificador="regraPrazo" className="w-full">
+                <Select textoLabel="Regra de Prazo" identificador="regraPrazo" className="w-full" divClassName="flex flex-col gap-1">
                   <option value="regra-prazo">Art. 105: Duração Adstrita à Vigência dos Créditos Orçamentários ou por escopo pré-definido.</option>
                   <option value="regra-prazo-justificativa">
                     Art. 106: Contratos de Serviços e Fornecimentos Contínuos (até 5 anos).

@@ -1,6 +1,6 @@
 import { Botao } from "./Botao";
 import { Select } from "./Select";
-import { Input } from "./Input";
+/* import { Input } from "./Input"; */
 
 
 
@@ -56,7 +56,7 @@ export function Objeto(){
               <option value="">Contratação por Tarefa</option>
           </Select>
         </div>
-        <div className="flex flex-col gap-2 mt-2">
+        {/* <div className="flex flex-col gap-2 mt-2">
                 <h2 className="font-bold ">Regra de prazo</h2>
                 <Input identificador="regra-prazo" texto="Art. 105: Duração Adstrita à Vigência dos Créditos Orçamentários ou por escopo pré-definido." type="radio" className="col-span-2" />
                 <Input identificador="regra-prazo-justificativa" texto="Art. 106: Contratos de Serviços e Fornecimentos Contínuos (até 5 anos)." type="radio" className="col-span-2" />
@@ -69,7 +69,7 @@ export function Objeto(){
                 <Input identificador="regra-prazo" texto="Art. 114: Operação continuada de sistemas estruturantes (até 15 anos)" type="radio" className="col-span-2" />
                 <Input identificador="regra-prazo-justificativa" texto="Art. 75, VIII: Contratação Emergencial (até 1 ano)." type="radio" className="col-span-2" />
                 <Input identificador="regra-prazo-justificativa" texto="Contratos de Locação de Imóveis." type="radio" className="col-span-2" />
-              </div>
+              </div> */}
               <div>
                 <Select textoLabel="Regra de Prazo" identificador="regraPrazo" className="w-full" divClassName="flex flex-col gap-1">
                   <option value="regra-prazo">Art. 105: Duração Adstrita à Vigência dos Créditos Orçamentários ou por escopo pré-definido.</option>

@@ -1,8 +1,8 @@
 import './App.css'
-import { Anexos } from './components/template/Anexos';
+/* import { Anexos } from './components/template/Anexos';
 import { DetalhamentoDoObjeto } from './components/template/DetalhamentoDoObjeto';
 import { InformacoesContratuais } from './components/template/InformacoesContratuais';
-import { InformacoesDoProcesso } from './components/template/InformacoesDoProcesso';
+import { InformacoesDoProcesso } from './components/template/InformacoesDoProcesso'; */
 import { Objeto } from './components/template/Objeto';
 import { Tabs } from './components/template/Tabs';
 
@@ -14,7 +14,8 @@ const dadosDasMinhasAbas = [
         <Objeto/>
       </div>
     ),
-  },
+  }
+  /* ,
   {
     label: 'Detalhamento do objeto',
     content: (
@@ -47,7 +48,7 @@ const dadosDasMinhasAbas = [
         <Anexos/>
       </div>
     )
-  }
+  } */
 ];
 
 

@@ -14,7 +14,7 @@ export function Tabs({tabs}: TabsComponentProps){
 
   return(
     <div className="w-4/5 mx-auto">
-      <h1 className="text-3xl font-bold">Processo de Contratação</h1>
+      {/* <h1 className="text-3xl font-bold">Processo de Contratação</h1> */}
       <div className="flex border-b border-gray-300" role="tablist" aria-label="Abas de navegação">
         {tabs.map((tab, index)=>{
           const isActive = index === activeTabIndex

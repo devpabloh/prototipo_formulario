@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Botao } from "./Botao";
 import { Select } from "./Select";
 /* import { Input } from "./Input"; */
@@ -5,20 +6,20 @@ import { Select } from "./Select";
 
 
 export function Objeto(){
+  const [formData, setFormData] = useState("")
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+
+    
+  }
   return(
     <section className="flex flex-col gap-1">
-      <h1 className="text-center font-bold text-2xl">Seção: Objeto da Contratação</h1>
-      <h2 className="font-bold text-xl">Objeto da contratação</h2>
       <form action="submit" className="flex flex-col gap-4">
         <div className="flex flex-col">
           <label htmlFor="objeto" className="font-bold">Objeto <span className="text-red-300">*</span></label>
           <input type="text" id="objetoDetalhado" className="border border-gray-300 p-2 rounded h-20 mt-2" />
         </div>
-     {/*    <div className="flex flex-col">
-          <label htmlFor="objetoDetalhado" className="font-bold">Objeto Resumido<span className="text-red-300">*</span></label>
-          <input type="text" id="objetoDetalhado" className="border border-gray-300 p-2 rounded h-10 mt-2" />
-        </div> */}
         <div className="grid grid-cols-2 gap-4">
           <Select identificador="fracionamento" textoLabel="Fracionamento do objeto" divClassName="flex flex-col gap-1">
               <option value="">Selecione uma Opção</option>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import type { ChangeEvent } from "react";
 import { Botao } from "./Botao";
 import { Select } from "./Select";
-/* import { Input } from "./Input"; */
 
 
 
@@ -35,6 +34,7 @@ export function Objeto(){
         <div className="flex flex-col">
           <label htmlFor="objetoDetalhado" className="font-bold">Objeto <span className="text-red-300">*</span></label>
           <input type="text" id="objetoDetalhado" name="objetoDetalhado" className="border border-gray-300 rounded h-20 p-1 mt-2" onChange={handleChange} />
+          <span className="text-gray-400 text-end text-sm mt-1">Até 800 caracteres</span>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <Select identificador="fracionamento" textoLabel="Fracionamento do objeto" divClassName="flex flex-col gap-1" onChange={handleChange}>

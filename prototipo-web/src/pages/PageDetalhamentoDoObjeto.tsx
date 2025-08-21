@@ -1,4 +1,4 @@
-import { Objeto } from '../components/template/Objeto';
+
 
 export function PageDetalhamentoDoObjeto(){
     return(

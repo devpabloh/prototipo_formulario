@@ -6,6 +6,7 @@ import {Home} from './pages/Home';
 import Layout from './components/template/Layout'; // O layout principal
 import { PageDetalhamentoDoObjeto } from './pages/PageDetalhamentoDoObjeto';
 import { TermoDeReferencia } from './pages/TermoDeReferencia';
+import { VedacaoOuParticipacaoDeEmpresasSobFormaDeConsorcio } from './pages/vedacaoOuParticipacaoDeEmpresasSobFormaDeConsorcio';
 
 // Criando o roteador
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/termoDeReferencia', // o caminho é relativo a '/painel' -> /painel/perfil
         element: <TermoDeReferencia />,
+      },
+      {
+        path: '/vedacaoOuParticipacaoDeEmpresasSobFormaDeConsorcio', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <VedacaoOuParticipacaoDeEmpresasSobFormaDeConsorcio/>,
       }
     ],
   },

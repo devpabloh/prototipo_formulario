@@ -44,6 +44,16 @@ export default function Sidebar() {
             Termo de Referência
           </NavLink>
         </li>
+        <li>
+          <NavLink 
+            to="/VedacaoOuParticipacaoDeEmpresasSobFormaDeConsorcio"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            2.5 Vedação ou Participação De Empresas Sob Consorcio
+          </NavLink>
+        </li>
         
         <hr className="my-4 border-blue-400" />
         

@@ -7,9 +7,13 @@ interface BotaoProps{
 }
 
 
-export function Botao({texto, className, icon, type}: Readonly<BotaoProps>){
+export function Botao({texto, className, icon, type, onClick}: Readonly<BotaoProps>){
   return(
-    <button type={type} className={`bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200 cursor-pointer ${className}`}>
+    <button 
+      type={type} 
+      className={`bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200 cursor-pointer ${className}`}
+      onClick={onClick}
+    >
       {icon}
       {texto}
     </button>

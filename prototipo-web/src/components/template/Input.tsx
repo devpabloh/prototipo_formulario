@@ -7,12 +7,21 @@ interface InputProps {
   readOnly?: boolean;
   placeholder?: string;
   labelClassName?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function Input({ identificador, texto, type, className, value, readOnly, placeholder,labelClassName  }: Readonly<InputProps>){
+export function Input({ identificador, texto, type, className, value, readOnly, placeholder, labelClassName, onChange }: Readonly<InputProps>){
   return(
     <label htmlFor={identificador} className={labelClassName}>
-      <input id={identificador} type={type} className={`border border-gray-300 p-1 rounded ${className}`} value={value} readOnly={readOnly} placeholder={placeholder} />
+      <input 
+        id={identificador} 
+        type={type} 
+        className={`border border-gray-300 p-1 rounded ${className}`} 
+        value={value} 
+        readOnly={readOnly} 
+        placeholder={placeholder}
+        onChange={onChange}
+      />
       {texto}
     </label>
   )

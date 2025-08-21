@@ -1,12 +1,23 @@
 import { useState } from 'react';
 
-// Um pequeno ícone de lixeira para o botão de deletar (opcional)
-const TrashIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-    <path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.144-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.057-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-  </svg>
-);
+// Definindo as interfaces para os tipos
+interface Item {
+  id: number;
+  nome: string;
+  qtd: string;
+  valor: string;
+}
 
+interface Grupo {
+  id: number;
+  nome: string;
+  itens: Item[];
+  itemAtualGrupo: {
+    nome: string;
+    qtd: string;
+    valor: string;
+  };
+}
 
 export default function GestaoDeItens() {
   // Estado para controlar o modo selecionado: 'unidade' ou 'grupo'
@@ -14,14 +25,14 @@ export default function GestaoDeItens() {
 
   // --- ESTADOS PARA O MODO "POR UNIDADE" ---
   const [itemAtual, setItemAtual] = useState({ nome: '', qtd: '', valor: '' });
-  const [itensPorUnidade, setItensPorUnidade] = useState([]);
+  const [itensPorUnidade, setItensPorUnidade] = useState<Item[]>([]);
 
   // --- ESTADOS PARA O MODO "POR GRUPO" ---
   const [nomeNovoGrupo, setNomeNovoGrupo] = useState('');
-  const [grupos, setGrupos] = useState([]);
+  const [grupos, setGrupos] = useState<Grupo[]>([]);
 
   // --- FUNÇÕES DO MODO "POR UNIDADE" ---
-  const handleItemAtualChange = (e) => {
+  const handleItemAtualChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setItemAtual(prev => ({ ...prev, [name]: value }));
   };
@@ -31,7 +42,7 @@ export default function GestaoDeItens() {
       alert('Preencha todos os campos do item!');
       return;
     }
-    const novoItem = { ...itemAtual, id: Date.now() };
+    const novoItem: Item = { ...itemAtual, id: Date.now() };
     setItensPorUnidade(prev => [...prev, novoItem]);
     setItemAtual({ nome: '', qtd: '', valor: '' }); // Limpa os inputs
   };
@@ -42,7 +53,7 @@ export default function GestaoDeItens() {
       alert('Digite um nome para o grupo!');
       return;
     }
-    const novoGrupo = {
+    const novoGrupo: Grupo = {
       id: Date.now(),
       nome: nomeNovoGrupo,
       itens: [],
@@ -52,7 +63,7 @@ export default function GestaoDeItens() {
     setNomeNovoGrupo(''); // Limpa o input
   };
 
-  const handleItemGrupoChange = (grupoId, e) => {
+  const handleItemGrupoChange = (grupoId: number, e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setGrupos(prevGrupos => prevGrupos.map(grupo => 
       grupo.id === grupoId 
@@ -61,8 +72,10 @@ export default function GestaoDeItens() {
     ));
   };
 
-  const handleAdicionarItemNoGrupo = (grupoId) => {
+  const handleAdicionarItemNoGrupo = (grupoId: number) => {
     const grupoAlvo = grupos.find(g => g.id === grupoId);
+    if (!grupoAlvo) return;
+    
     const { nome, qtd, valor } = grupoAlvo.itemAtualGrupo;
 
     if (!nome || !qtd || !valor) {
@@ -70,7 +83,7 @@ export default function GestaoDeItens() {
       return;
     }
     
-    const novoItem = { ...grupoAlvo.itemAtualGrupo, id: Date.now() };
+    const novoItem: Item = { ...grupoAlvo.itemAtualGrupo, id: Date.now() };
 
     setGrupos(prevGrupos => prevGrupos.map(grupo =>
       grupo.id === grupoId
@@ -124,15 +137,15 @@ export default function GestaoDeItens() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
                 <div className="md:col-span-2">
                   <label htmlFor="nome" className="block text-sm font-medium text-gray-700">Nome do Item</label>
-                  <input type="text" name="nome" value={itemAtual.nome} onChange={handleItemAtualChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                  <input type="text" name="nome" id='nome' value={itemAtual.nome} onChange={handleItemAtualChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                 </div>
                 <div>
                   <label htmlFor="qtd" className="block text-sm font-medium text-gray-700">Quantidade</label>
-                  <input type="number" name="qtd" value={itemAtual.qtd} onChange={handleItemAtualChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                  <input type="number" name="qtd" id='qtd' value={itemAtual.qtd} onChange={handleItemAtualChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                 </div>
                 <div>
                   <label htmlFor="valor" className="block text-sm font-medium text-gray-700">Valor Unitário</label>
-                  <input type="number" name="valor" value={itemAtual.valor} onChange={handleItemAtualChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                  <input type="number" name="valor" id='valor' value={itemAtual.valor} onChange={handleItemAtualChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                 </div>
               </div>
                <button onClick={handleAdicionarItemUnidade} className="mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
@@ -191,8 +204,8 @@ export default function GestaoDeItens() {
                   {/* Formulário para adicionar item DENTRO do grupo */}
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-4 p-4 bg-gray-50 rounded-md">
                      <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-gray-700">Nome do Item</label>
-                      <input type="text" name="nome" value={grupo.itemAtualGrupo.nome} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                      <label className="block text-sm font-medium text-gray-700" id='nomeDoItem'>Nome do Item</label>
+                      <input type="text" name="nomeDoItem" value={grupo.itemAtualGrupo.nome} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700">Quantidade</label>

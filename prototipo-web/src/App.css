@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Garantir que o body e html tenham altura total */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .sidebar ul li a {
   @apply block py-2 px-4 mb-1 rounded-md no-underline text-gray-800 transition-colors duration-200;
 }

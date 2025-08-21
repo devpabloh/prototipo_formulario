@@ -50,12 +50,12 @@ export function TermoDeReferencia(){
                 </fieldset>
                 <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 4.2 Classificação orçamentária da despesa </legend>
-                    <Input identificador="" type="texto" texto="Fonte" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
-                    <Input identificador="" type="texto" texto="Unidade" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
-                    <Input identificador="" type="texto" texto="Programa" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
-                    <Input identificador="" type="texto" texto="Ação" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
-                    <Input identificador="" type="texto" texto="Elemento de Despesa" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
-                    <Input identificador="" type="texto" texto="Categoria Econômica" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
+                    <Input identificador="" type="text" texto="Fonte" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
+                    <Input identificador="" type="text" texto="Unidade" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
+                    <Input identificador="" type="text" texto="Programa" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
+                    <Input identificador="" type="text" texto="Ação" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
+                    <Input identificador="" type="text" texto="Elemento de Despesa" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
+                    <Input identificador="" type="text" texto="Categoria Econômica" labelClassName="flex flex-col-reverse font-bold" placeholder="Até 50 caracteres"/>
                 </fieldset>
                 <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 4.3 Justificativa para aplicação ou não do benefício previsto na Lei complementar nº 123/2006 </legend>
@@ -88,7 +88,7 @@ export function TermoDeReferencia(){
                 <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 5.2 Proposta </legend>
                     <div  className="flex justify-start gap-4 mt-4">
-                        <Input identificador="" type="texto" texto="Prazo de Validade da Proposta (em dias)" labelClassName="flex flex-col-reverse font-bold w-1/2" placeholder=""/>
+                        <Input identificador="" type="text" texto="Prazo de Validade da Proposta (em dias)" labelClassName="flex flex-col-reverse font-bold w-1/2" placeholder=""/>
                         <SimNao label="Requer garantia de proposta?" name="garantiaDeProposta" className="w-1/2"/>
                     </div>
                     <div className="flex justify-start gap-4 mt-4">
@@ -109,7 +109,7 @@ export function TermoDeReferencia(){
                 <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 5.3 Requisitos específicos de habilitação </legend>
                     <div  className="flex justify-start gap-4 mt-4">
-                        <Input identificador="" type="texto" texto="Prazo de Validade da Proposta (em dias)" labelClassName="flex flex-col-reverse font-bold w-1/2" placeholder=""/>
+                        <Input identificador="" type="text" texto="Prazo de Validade da Proposta (em dias)" labelClassName="flex flex-col-reverse font-bold w-1/2" placeholder=""/>
                         <SimNao label="Habilitação jurídica requer atendimento de lei especial?" name="atendimentoLeiEspecial" className="w-1/2"/>
                     </div>
                     <div className="flex justify-start gap-4 mt-4">
@@ -121,7 +121,7 @@ export function TermoDeReferencia(){
                         <SimNao label="Requer Registro em entidade profissional" name="registroEntidadeProfissional" className="w-1/2"/>
                     </div>
                     <div  className="flex justify-start gap-4 mt-4">
-                        <Input identificador="" type="texto" texto="Nome completo da entidade profissional" labelClassName="flex flex-col-reverse font-bold w-1/2" placeholder="Até 100 caracteres"/>
+                        <Input identificador="" type="text" texto="Nome completo da entidade profissional" labelClassName="flex flex-col-reverse font-bold w-1/2" placeholder="Até 100 caracteres"/>
                         <Select identificador="" textoLabel="Habilitação Econômica financeira por:" divClassName="flex flex-col w-1/2">
                             <option value="patrimonioLiquido">Patrimônio Líquido</option>
                             <option value="capitalSocial">Capital Social</option>

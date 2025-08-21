@@ -1,10 +1,12 @@
+import type { ReactNode, ChangeEvent } from 'react';
+
 interface SelectProps{
   identificador: string;
   textoLabel: string;
-  children: React.ReactNode;
+  children: ReactNode;
   divClassName?: string
   className?: string
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  onChange?: (e: ChangeEvent<HTMLSelectElement>) => void
 }
 
 export function Select({ identificador, textoLabel, children, divClassName, className,onChange }: Readonly<SelectProps>){

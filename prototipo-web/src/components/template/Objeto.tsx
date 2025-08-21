@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import type { ChangeEvent } from "react";
 import { Botao } from "./Botao";
 import { Select } from "./Select";
 /* import { Input } from "./Input"; */
@@ -21,7 +22,7 @@ export function Objeto(){
 });
 
   const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
 ) => {
   const { name, value } = e.target;
   setFormData((prev) => ({ ...prev, [name]: value }));

@@ -1,3 +1,5 @@
+import type { ChangeEvent } from 'react';
+
 interface InputProps {
   identificador: string;
   texto?: string;
@@ -7,7 +9,7 @@ interface InputProps {
   readOnly?: boolean;
   placeholder?: string;
   labelClassName?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export function Input({ identificador, texto, type, className, value, readOnly, placeholder, labelClassName, onChange }: Readonly<InputProps>){

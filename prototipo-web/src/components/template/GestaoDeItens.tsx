@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import type { ChangeEvent } from 'react';
 
 // Definindo as interfaces para os tipos
 interface Item {
@@ -32,7 +33,7 @@ export default function GestaoDeItens() {
   const [grupos, setGrupos] = useState<Grupo[]>([]);
 
   // --- FUNÇÕES DO MODO "POR UNIDADE" ---
-  const handleItemAtualChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleItemAtualChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setItemAtual(prev => ({ ...prev, [name]: value }));
   };
@@ -63,11 +64,13 @@ export default function GestaoDeItens() {
     setNomeNovoGrupo(''); // Limpa o input
   };
 
-  const handleItemGrupoChange = (grupoId: number, e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleItemGrupoChange = (grupoId: number, e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+    if (name !== 'nome' && name !== 'qtd' && name !== 'valor') return;
+    const key = name as 'nome' | 'qtd' | 'valor';
     setGrupos(prevGrupos => prevGrupos.map(grupo => 
       grupo.id === grupoId 
-        ? { ...grupo, itemAtualGrupo: { ...grupo.itemAtualGrupo, [name]: value } }
+        ? { ...grupo, itemAtualGrupo: { ...grupo.itemAtualGrupo, [key]: value } }
         : grupo
     ));
   };
@@ -204,16 +207,16 @@ export default function GestaoDeItens() {
                   {/* Formulário para adicionar item DENTRO do grupo */}
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-4 p-4 bg-gray-50 rounded-md">
                      <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-gray-700" id='nomeDoItem'>Nome do Item</label>
-                      <input type="text" name="nomeDoItem" value={grupo.itemAtualGrupo.nome} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                      <label className="block text-sm font-medium text-gray-700" htmlFor={`nome-${grupo.id}`}>Nome do Item</label>
+                      <input id={`nome-${grupo.id}`} placeholder="Informe o nome do item" type="text" name="nome" value={grupo.itemAtualGrupo.nome} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">Quantidade</label>
-                      <input type="number" name="qtd" value={grupo.itemAtualGrupo.qtd} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                      <label className="block text-sm font-medium text-gray-700" htmlFor={`qtd-${grupo.id}`}>Quantidade</label>
+                      <input id={`qtd-${grupo.id}`} placeholder="Informe a quantidade" type="number" name="qtd" value={grupo.itemAtualGrupo.qtd} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">Valor Unitário</label>
-                      <input type="number" name="valor" value={grupo.itemAtualGrupo.valor} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+                      <label className="block text-sm font-medium text-gray-700" htmlFor={`valor-${grupo.id}`}>Valor Unitário</label>
+                      <input id={`valor-${grupo.id}`} placeholder="Informe o valor" type="number" name="valor" value={grupo.itemAtualGrupo.valor} onChange={(e) => handleItemGrupoChange(grupo.id, e)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
                     </div>
                   </div>
                   <button onClick={() => handleAdicionarItemNoGrupo(grupo.id)} className="mb-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">

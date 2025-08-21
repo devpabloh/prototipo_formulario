@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react';
+
 interface BotaoProps{
   texto: string
   className?: string
-  icon?: React.ReactNode
+  icon?: ReactNode
   onClick?: () => void
   type?: "button" | "submit" | "reset";
 }

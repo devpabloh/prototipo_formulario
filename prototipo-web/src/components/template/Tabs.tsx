@@ -1,8 +1,9 @@
 import { useState } from "react"
+import type { ReactNode } from "react"
 
 interface TabProps{
   label: string,
-  content: React.ReactNode
+  content: ReactNode
 }
 
 interface TabsComponentProps{
@@ -24,7 +25,6 @@ export function Tabs({tabs}: TabsComponentProps){
             onClick={()=> setActiveTabIndex(index)}
             role="tab"
             id={`tab-${index}`}
-            aria-selected={isActive}
             aria-controls={`tabpanel-${index}`}
             className={`py-2 px-4 font-medium text-md transition-colors duration-200
                 ${isActive

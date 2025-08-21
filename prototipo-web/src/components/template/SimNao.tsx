@@ -4,10 +4,11 @@ interface SimNaoProps {
   label: string;
   name: string;
   className?: string;
+  valorInicial?: "sim" | "nao";
 }
 
-export function SimNao({ label, name, className }: Readonly<SimNaoProps>) {
-  const [valor, setValor] = useState<"sim" | "nao">("nao");
+export function SimNao({ label, name, className, valorInicial }: Readonly<SimNaoProps>) {
+  const [valor, setValor] = useState<"sim" | "nao">(valorInicial);
 
   return (
     <div className={`flex flex-col ${className}`}>

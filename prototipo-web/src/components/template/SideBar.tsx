@@ -34,13 +34,22 @@ export default function Sidebar() {
             Detalhamento do Objeto
           </NavLink>
         </li>
-        {/* Adicione outros links aqui seguindo o mesmo padrão */}
+        <li>
+          <NavLink 
+            to="/termoDeReferencia"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            Termo de Referência
+          </NavLink>
+        </li>
         
         <hr className="my-4 border-blue-400" />
         
         <li>
           <NavLink 
-            to="/sair" // Alterado para um caminho diferente para não conflitar com a Home
+            to="/sair"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }

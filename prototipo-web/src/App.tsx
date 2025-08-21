@@ -5,6 +5,7 @@ import './App.css';
 import {Home} from './pages/Home';
 import Layout from './components/template/Layout'; // O layout principal
 import { PageDetalhamentoDoObjeto } from './pages/PageDetalhamentoDoObjeto';
+import { TermoDeReferencia } from './pages/TermoDeReferencia';
 
 // Criando o roteador
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/detalhamentoDoObjeto', // o caminho é relativo a '/painel' -> /painel/perfil
         element: <PageDetalhamentoDoObjeto />,
+      },
+      {
+        path: '/termoDeReferencia', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <TermoDeReferencia />,
       }
     ],
   },

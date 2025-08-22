@@ -17,6 +17,12 @@ import { ClassificacaoOrcamentariaDaDespesa } from './pages/ClassificacaoOrcamen
 import { JustificativaParaAplicacaoOuNaoDoBeneficioPrevistoLeiComplementarN123_2006 } from './pages/JustificativaParaAplicacaoOuNaoDoBeneficioPrevistoLeiComplementarN123_2006';
 import { ModalidadeDeLicitacaoCriterioDeJulgamentoRegimeDeExecucaoEModoDeDisputa } from './pages/ModalidadeDeLicitacaoCriterioDeJulgamentoRegimeDeExecucaoEModoDeDisputa';
 import { Proposta } from './pages/Proposta';
+import { RequisitosEspecificosDeHabilitacao } from './pages/RequisitosEspecificosDeHabilitacao';
+import { DoRegistroDePrecos } from './pages/DoRegistroDePrecos';
+import { PrevisaoEJustificativaDaPossibilidadeDeAdesaoPorOrgaosEEntidadesNaoParticipantesECondicoesDeAdesao } from './pages/PrevisaoEJustificativaDaPossibilidadeDeAdesaoPorOrgaosEEntidadesNaoParticipantesECondicoesDeAdesao';
+import { ObrigacoesEResponsabilidadesDaGerenciadoraDaATA } from './pages/ObrigacoesEResponsabilidadesDaGerenciadoraDaATA';
+import { ObrigaçõesEResponsabilidadesDaDentetoraDaATA } from './pages/ObrigaçõesEResponsabilidadesDaDentetoraDaATA';
+import { DoContrato } from './pages/DoContrato';
 
 // Criando o roteador
 const router = createBrowserRouter([
@@ -79,7 +85,34 @@ const router = createBrowserRouter([
       {
         path: '/Proposta', // o caminho é relativo a '/painel' -> /painel/perfil
         element: <Proposta/>,
+      },
+      {
+        path: '/RequisitosEspecificosDeHabilitacao', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <RequisitosEspecificosDeHabilitacao/>,
+      },
+      {
+        path: '/DoRegistroDePrecos', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <DoRegistroDePrecos/>,
+      },
+      {
+        path: '/PrevisaoEJustificativaDaPossibilidadeDeAdesaoPorOrgaosEEntidadesNaoParticipantesECondicoesDeAdesao', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <PrevisaoEJustificativaDaPossibilidadeDeAdesaoPorOrgaosEEntidadesNaoParticipantesECondicoesDeAdesao/>,
+      },
+      {
+        path: '/ObrigacoesEResponsabilidadesDaGerenciadoraDaATA', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <ObrigacoesEResponsabilidadesDaGerenciadoraDaATA/>,
+      },
+      {
+        path: '/ObrigaçõesEResponsabilidadesDaDentetoraDaATA', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <ObrigaçõesEResponsabilidadesDaDentetoraDaATA/>,
+      },
+      {
+        path: '/DoContrato', // o caminho é relativo a '/painel' -> /painel/perfil
+        element: <DoContrato/>,
       }
+      
+      
+      
       
       
     ],

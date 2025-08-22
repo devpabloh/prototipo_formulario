@@ -132,7 +132,7 @@ export function TermoDeReferencia(){
                     <Input identificador="" type="number" texto="Percentual do valor da contratação para habilitação econômico financeiro" labelClassName="flex flex-col-reverse mt-1 font-bold"/>
                     
                 </fieldset>
-                 <fieldset className="border-2 border-gray-400 rounded-xl p-3">
+                <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 6 Do registro de preços </legend>
                     
                     

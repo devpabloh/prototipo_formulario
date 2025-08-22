@@ -154,6 +154,66 @@ export default function Sidebar() {
             5.2 Proposta
           </NavLink>
         </li>
+        <li>
+          <NavLink 
+            to="/RequisitosEspecificosDeHabilitacao"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            5.3 Requisitos específicos de habilitação
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/DoRegistroDePrecos"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            6 Do registro de preços
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/PrevisaoEJustificativaDaPossibilidadeDeAdesaoPorOrgaosEEntidadesNaoParticipantesECondicoesDeAdesao"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            6.7 Previsão e justificativa da possibilidade de adesão por orgãos e entidades não participantes e condições de adesão
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/ObrigacoesEResponsabilidadesDaGerenciadoraDaATA"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            6.9 Obrigações e responsabilidades da gerenciadora da ATA
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/ObrigaçõesEResponsabilidadesDaDentetoraDaATA"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            6.10 Obrigações e responsabilidades da dentetora da ATA
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/DoContrato"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            7 Do contrato
+          </NavLink>
+        </li>
         
         <hr className="my-4 border-blue-400" />
         
@@ -167,6 +227,7 @@ export default function Sidebar() {
             Sair
           </NavLink>
         </li>
+        
       </ul>
     </nav>
   );

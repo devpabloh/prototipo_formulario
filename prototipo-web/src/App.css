@@ -19,3 +19,47 @@ html, body, #root {
 .sidebar ul li a.active-link {
   @apply bg-blue-500 text-white font-bold;
 }
+.sidebar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #1d4ed8 #93c5fd; /* thumb azul-700, trilho azul-300 */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;               /* largura da barra */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #93c5fd;      /* azul-300 */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #1d4ed8; /* azul-700 */
+  border-radius: 9999px;
+  border: 2px solid #93c5fd; /* cria “respiro” no trilho */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #1e40af; /* azul-800 no hover */
+}
+
+/* Tive que fazer o scrool separado */
+.sidebar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: theme(colors.blue.700) theme(colors.blue.300); /* thumb azul-700, trilho azul-300 */
+}
+
+.sidebar::-webkit-scrollbar {
+  @apply w-2; /* 8px */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  @apply bg-blue-300;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  @apply bg-blue-700 rounded-full border-2 border-blue-300;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-800;
+}

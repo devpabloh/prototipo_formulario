@@ -10,7 +10,7 @@ export default function Sidebar() {
 
   return (
     // O seu container de navegação já está com um fundo azul claro
-    <nav className="h-screen w-[250px] bg-blue-300 p-5 shadow-lg">
+    <nav className="sidebar h-screen w-[250px] bg-blue-300 p-5 shadow-lg overflow-y-auto overflow-x-hidden">
       <h2 className="text-center text-xl font-bold text-blue-900 mb-8">Menu</h2>
       <ul className="space-y-2">
         <li>

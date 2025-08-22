@@ -46,174 +46,96 @@ export default function Sidebar() {
         </li>
         <li>
           <NavLink 
-            to="/VedacaoOuParticipacaoDeEmpresasSobFormaDeConsorcio"
+            to="/ItemsDois"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            2.5 Vedação ou Participação De Empresas Sob Consorcio
+            Items 2.5 ao 2.7
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/VedacaoOuParticipacaoDeProfissionaisOrganizadosEmCooperativa"
+            to="/ItemsTres"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            2.6 Vedação ou Participação de Profissionais Organizados em Cooperativa
+            Items 3.2 ao 3.4
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/ParticipacaoOuVedaçãoDePessoasFisicasNaLicitacao"
+            to="/ItemsQuatro"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            2.7 participação ou vedação de pessoas físicas na licitação
+            Items 4.1 ao 4.3
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/DaExecucaoDosServicos"
+            to="/ItemsCinco"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            3.2 Da execução dos serviços
+            Items 5.1 ao 5.3
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/IndicacaoDeMarcasOuModelos"
+            to="/ItemsSeis"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            3.3 Indicação de marcas ou modelos (se for o caso)
+            Items 6 ao 6.10
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/DaVedacaoDeUtilizacaoDeMarcaOuProdutoNaExecucaoDoServico"
+            to="/ItemsSete"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            3.4 Da vedação de utilização de marca / produto na execução do serviço
+            Items 7 ao 7.8
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/ValorEstimadoDeContratacao"
+            to="/ItemsOito"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            4.1 Valor estimado de contratação
+            Items 8
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/ClassificacaoOrcamentariaDaDespesa"
+            to="/ItemsDez"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            4.2 Classificação orçamentária da despesa
+            Items 10.1
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to="/JustificativaParaAplicacaoOuNaoDoBeneficioPrevistoLeiComplementarN123_2006"
+            to="/ItemUltimaSecaoTermoDeReferencia"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }
           >
-            4.3 Justificativa para aplicação ou não do benefício previsto na Lei complementar nº 123/2006
+            Última seção do Termo de Referência
           </NavLink>
         </li>
-        <li>
-          <NavLink 
-            to="/ModalidadeDeLicitacaoCriterioDeJulgamentoRegimeDeExecucaoEModoDeDisputa"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            5.1 Modalidade de licitação, critério de julgamento, regime de execução e modo de disputa
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/Proposta"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            5.2 Proposta
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/RequisitosEspecificosDeHabilitacao"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            5.3 Requisitos específicos de habilitação
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/DoRegistroDePrecos"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            6 Do registro de preços
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/PrevisaoEJustificativaDaPossibilidadeDeAdesaoPorOrgaosEEntidadesNaoParticipantesECondicoesDeAdesao"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            6.7 Previsão e justificativa da possibilidade de adesão por orgãos e entidades não participantes e condições de adesão
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/ObrigacoesEResponsabilidadesDaGerenciadoraDaATA"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            6.9 Obrigações e responsabilidades da gerenciadora da ATA
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/ObrigaçõesEResponsabilidadesDaDentetoraDaATA"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            6.10 Obrigações e responsabilidades da dentetora da ATA
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/DoContrato"
-            className={({ isActive }) =>
-              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
-            }
-          >
-            7 Do contrato
-          </NavLink>
-        </li>
+        
+        
         
         <hr className="my-4 border-blue-400" />
         

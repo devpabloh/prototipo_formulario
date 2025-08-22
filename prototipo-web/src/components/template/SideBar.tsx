@@ -54,12 +54,112 @@ export default function Sidebar() {
             2.5 Vedação ou Participação De Empresas Sob Consorcio
           </NavLink>
         </li>
+        <li>
+          <NavLink 
+            to="/VedacaoOuParticipacaoDeProfissionaisOrganizadosEmCooperativa"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            2.6 Vedação ou Participação de Profissionais Organizados em Cooperativa
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/ParticipacaoOuVedaçãoDePessoasFisicasNaLicitacao"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            2.7 participação ou vedação de pessoas físicas na licitação
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/DaExecucaoDosServicos"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            3.2 Da execução dos serviços
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/IndicacaoDeMarcasOuModelos"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            3.3 Indicação de marcas ou modelos (se for o caso)
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/DaVedacaoDeUtilizacaoDeMarcaOuProdutoNaExecucaoDoServico"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            3.4 Da vedação de utilização de marca / produto na execução do serviço
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/ValorEstimadoDeContratacao"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            4.1 Valor estimado de contratação
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/ClassificacaoOrcamentariaDaDespesa"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            4.2 Classificação orçamentária da despesa
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/JustificativaParaAplicacaoOuNaoDoBeneficioPrevistoLeiComplementarN123_2006"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            4.3 Justificativa para aplicação ou não do benefício previsto na Lei complementar nº 123/2006
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/ModalidadeDeLicitacaoCriterioDeJulgamentoRegimeDeExecucaoEModoDeDisputa"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            5.1 Modalidade de licitação, critério de julgamento, regime de execução e modo de disputa
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/Proposta"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            5.2 Proposta
+          </NavLink>
+        </li>
         
         <hr className="my-4 border-blue-400" />
         
         <li>
           <NavLink 
-            to="/sair"
+            to="/"
             className={({ isActive }) =>
               `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
             }

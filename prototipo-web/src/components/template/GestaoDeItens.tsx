@@ -45,7 +45,7 @@ export default function GestaoDeItens() {
     }
     const novoItem: Item = { ...itemAtual, id: Date.now() };
     setItensPorUnidade(prev => [...prev, novoItem]);
-    setItemAtual({ nome: '', qtd: '', valor: '' }); // Limpa os inputs
+    setItemAtual({ nome: '', qtd: '', valor: '' }); 
   };
 
   // --- FUNÇÕES DO MODO "POR GRUPO" ---
@@ -93,7 +93,7 @@ export default function GestaoDeItens() {
         ? { 
             ...grupo, 
             itens: [...grupo.itens, novoItem],
-            itemAtualGrupo: { nome: '', qtd: '', valor: '' } // Limpa o formulário do grupo
+            itemAtualGrupo: { nome: '', qtd: '', valor: '' }
           }
         : grupo
     ));

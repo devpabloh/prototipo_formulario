@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 
-// Importando nossos componentes
+// Importando componentes
 import {Home} from './pages/Home';
-import Layout from './components/template/Layout'; // O layout principal
+import Layout from './components/template/Layout'; 
 import { PageDetalhamentoDoObjeto } from './pages/PageDetalhamentoDoObjeto';
 import { TermoDeReferencia } from './pages/TermoDeReferencia';
 import { ItemsDois } from './pages/ItemsDois';
@@ -16,12 +16,12 @@ import { ItemsOito } from './pages/ItemsOito';
 import { ItemsDez } from './pages/ItemsDez';
 import { ItemUltimaSecaoTermoDeReferencia } from './pages/ItemUltimaSecaoTermoDeReferencia';
 
-// Criando o roteador
+// Rotas
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />, // O elemento pai é o nosso Layout com o menu
-    children: [ // Aqui definimos as rotas aninhadas (filhas)
+    element: <Layout />, 
+    children: [ 
       {
         index: true, // A rota padrão para /painel
         element: <Home />,

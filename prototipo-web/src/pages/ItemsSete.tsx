@@ -1,3 +1,4 @@
+import { Cards } from "../components/template/Cards";
 import { Input } from "../components/template/Input";
 import { RangePorcentagem } from "../components/template/RangePorcentagem";
 import { Select } from "../components/template/Select";
@@ -5,7 +6,7 @@ import { SimNao } from "../components/template/SimNao";
 
 export function ItemsSete(){
   return(
-    <div>
+    <div className="w-full overflow-x-hidden">
                       <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 7 Do contrato</legend>
                     <div className="flex gap-4">
@@ -49,7 +50,7 @@ export function ItemsSete(){
                 </fieldset>
                 <fieldset className="border-2 border-gray-400 rounded-xl p-3">
                     <legend className="font-bold"> 7.8 Modelo de gestão do contrato</legend>
-                    <div className="flex gap-4">
+                   {/*  <div className="flex gap-4">
                         <Select identificador="permiteSubcontratacao" textoLabel="Permite Subcontratação?" divClassName="flex flex-col w-1/2">
                             <option value="nao">Não</option>
                             <option value="SimParcelasAcessorias">Sim, parcelas Acessórias</option>
@@ -61,7 +62,8 @@ export function ItemsSete(){
                     <div className="flex gap-4">
                         <Input identificador="matricula" type="text" texto="Matrícula" labelClassName="flex flex-col-reverse w-1/2 font-bold"/>
                         <Input identificador="busca" type="search" texto="Busca" labelClassName="flex flex-col-reverse w-1/2 font-bold"/>
-                    </div>
+                    </div> */}
+                    <Cards/>
                 </fieldset>
     </div>
   )

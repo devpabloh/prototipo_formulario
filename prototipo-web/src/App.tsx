@@ -15,6 +15,7 @@ import { ItemsSete } from './pages/ItemsSete';
 import { ItemsOito } from './pages/ItemsOito';
 import { ItemsDez } from './pages/ItemsDez';
 import { ItemUltimaSecaoTermoDeReferencia } from './pages/ItemUltimaSecaoTermoDeReferencia';
+import { PageAnexos } from './pages/PageAnexos';
 
 // Rotas
 const router = createBrowserRouter([
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
           path: '/ItemUltimaSecaoTermoDeReferencia', // o caminho é relativo a '/painel' -> /painel/perfil
           element: <ItemUltimaSecaoTermoDeReferencia />,
         },
+        {
+          path: '/PageAnexos',
+          element: <PageAnexos/>
+        }
     ],
   },
 ]);

@@ -134,6 +134,16 @@ export default function Sidebar() {
             Última seção do Termo de Referência
           </NavLink>
         </li>
+        <li>
+          <NavLink 
+            to="/PageAnexos"
+            className={({ isActive }) =>
+              `${baseLinkClasses} ${isActive ? activeLinkClasses : inactiveLinkClasses}`
+            }
+          >
+            Anexos
+          </NavLink>
+        </li>
         
         
         

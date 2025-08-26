@@ -40,7 +40,7 @@ export function CardAnexo({ id, title, isMandatory = false, onFileChange, onRemo
       {!isMandatory && (
         <button
           onClick={() => onRemoveCard(id)}
-          className="absolute top-1 right-1 text-gray-400 hover:text-red-600 transition-colors"
+          className="absolute top-1 right-1 text-gray-400 hover:text-red-600 transition-colors cursor-pointer"
           title="Remover card"
         >
           <X size={16} />
@@ -51,15 +51,15 @@ export function CardAnexo({ id, title, isMandatory = false, onFileChange, onRemo
 
       <div className="flex items-center justify-center space-x-4 w-full">
   
-        <button onClick={handleViewFile} disabled={!file} className="disabled:opacity-30 disabled:cursor-not-allowed">
+        <button onClick={handleViewFile} disabled={!file} className="disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer">
           <Eye size={24} className={file ? 'text-blue-600 hover:text-blue-800' : 'text-gray-400'} />
         </button>
 
         <div className="flex-grow">
           {file ? (
-            <div className="flex items-center justify-between bg-gray-100 p-1 rounded">
+            <div className="flex items-center justify-between bg-gray-100 p-1 rounded cursor-pointer">
               <span className="text-xs truncate text-wrap" title={file.name}>{file.name}</span>
-              <button onClick={handleRemoveFile} className="text-red-500 hover:text-red-700">
+              <button onClick={handleRemoveFile} className="text-red-500 hover:text-red-700 cursor-pointer">
                 <X size={16} />
               </button>
             </div>
@@ -73,7 +73,7 @@ export function CardAnexo({ id, title, isMandatory = false, onFileChange, onRemo
               />
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="flex items-center justify-center w-full h-8 bg-gray-200 hover:bg-gray-300 rounded"
+                className="flex items-center justify-center w-full h-8 bg-gray-200 hover:bg-gray-300 rounded cursor-pointer"
               >
                 <Plus size={20} />
               </button>

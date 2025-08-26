@@ -49,9 +49,9 @@ export function ModalAdicionarCard({ isOpen, onClose, onAddCards, existingCardTi
   const availablePredefinedCards = PREDEFINED_CARDS;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 w-full max-w-lg relative">
-        <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
+        <button onClick={onClose} className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 cursor-pointer">
           <X size={24} />
         </button>
 
@@ -65,7 +65,7 @@ export function ModalAdicionarCard({ isOpen, onClose, onAddCards, existingCardTi
                       <button
                           key={title}
                           onClick={() => handleToggleSelect(title)}
-                          className={`px-3 py-2 rounded-md transition-colors text-sm ${
+                          className={`cursor-pointer px-3 py-2 rounded-md transition-colors text-sm ${
                           selected.includes(title)
                               ? 'bg-blue-600 text-white'
                               : 'bg-gray-200 hover:bg-gray-300'
@@ -83,7 +83,7 @@ export function ModalAdicionarCard({ isOpen, onClose, onAddCards, existingCardTi
             <div>
                 <button 
                     onClick={() => setShowCustom(!showCustom)} 
-                    className="font-semibold text-blue-600 hover:underline"
+                    className="font-semibold text-blue-600 hover:underline cursor-pointer"
                 >
                     Outros (Criar personalizado)
                 </button>
@@ -96,7 +96,7 @@ export function ModalAdicionarCard({ isOpen, onClose, onAddCards, existingCardTi
                             placeholder="Digite o título do card"
                             className="border border-gray-300 rounded-md px-2 py-1 w-full"
                         />
-                        <button onClick={handleAddCustom} className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600">
+                        <button onClick={handleAddCustom} className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 cursor-pointer">
                             Adicionar
                         </button>
                     </div>
@@ -108,7 +108,7 @@ export function ModalAdicionarCard({ isOpen, onClose, onAddCards, existingCardTi
           <button
             onClick={handleSubmit}
             disabled={selected.length === 0}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
           >
             Adicionar {selected.length > 0 ? selected.length : ''} card(s) selecionado(s)
           </button>

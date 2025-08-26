@@ -1,9 +1,6 @@
-// src/components/CardAnexo.tsx
-
 import React, { useRef, useState } from 'react';
-import { Eye, Plus, X } from 'lucide-react'; // Biblioteca de ícones popular, instale com: npm install lucide-react
+import { Eye, Plus, X } from 'lucide-react'; 
 
-// Definindo os tipos para as props do componente
 interface CardAnexoProps {
   readonly id: number;
   readonly title: string;
@@ -39,7 +36,7 @@ export function CardAnexo({ id, title, isMandatory = false, onFileChange, onRemo
 
   return (
     <div className="flex flex-col items-center justify-between lg:w-70 lg:h-80 md:w-70 md:h-70 h-60 w-60  border-2 border-gray-300 rounded-lg p-6 text-center relative shadow-sm transition-all duration-300">
-      {/* Botão para remover o card (apenas se não for obrigatório) */}
+     
       {!isMandatory && (
         <button
           onClick={() => onRemoveCard(id)}
@@ -53,12 +50,11 @@ export function CardAnexo({ id, title, isMandatory = false, onFileChange, onRemo
       <h3 className="font-bold mb-2 h-12 flex items-center">{title}</h3>
 
       <div className="flex items-center justify-center space-x-4 w-full">
-        {/* Ícone de Visualização */}
+  
         <button onClick={handleViewFile} disabled={!file} className="disabled:opacity-30 disabled:cursor-not-allowed">
           <Eye size={24} className={file ? 'text-blue-600 hover:text-blue-800' : 'text-gray-400'} />
         </button>
 
-        {/* Lógica para Adicionar/Mostrar/Remover arquivo */}
         <div className="flex-grow">
           {file ? (
             <div className="flex items-center justify-between bg-gray-100 p-1 rounded">

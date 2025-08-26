@@ -5,7 +5,6 @@ import { CardAnexo } from '../components/template/CardAnexo';
 import { ModalAdicionarCard } from '../components/template/ModalAdicionarCard';
 import { Plus } from 'lucide-react';
 
-// Definindo o tipo para um card
 export interface CardState {
   id: number;
   title: string;
@@ -36,7 +35,7 @@ export function PageAnexos() {
 
   const handleAddCards = (titles: string[]) => {
     const newCards: CardState[] = titles.map(title => ({
-      id: Date.now() + Math.random(), // ID único
+      id: Date.now() + Math.random(),
       title,
       file: null,
       isMandatory: false,
@@ -89,7 +88,6 @@ export function PageAnexos() {
               />
             ))}
 
-            {/* Molde para adicionar novos cards */}
             <button
               onClick={() => setIsModalOpen(true)}
               className="flex flex-col items-center justify-center lg:w-70 lg:h-80 md:w-60 md:h-70 h-50 w-60 border-2 border-dashed border-gray-400 rounded-lg p-3 text-center cursor-pointer hover:bg-gray-50 hover:border-blue-500 transition-all duration-300"
@@ -101,7 +99,6 @@ export function PageAnexos() {
         </div>
       </fieldset>
 
-      {/* Modal para adicionar cards */}
       <ModalAdicionarCard
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

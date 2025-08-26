@@ -1,5 +1,3 @@
-// src/components/ModalAdicionarCard.tsx
-
 import { useState } from 'react';
 import { X } from 'lucide-react';
 
